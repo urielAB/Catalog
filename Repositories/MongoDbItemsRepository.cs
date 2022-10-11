@@ -1,16 +1,19 @@
 using Catalog.Entities;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using Catalog.Repositories;
 
 namespace Catalog.Repositories 
 {
-    public class MongoDbItemsRepository : IInMemItemsRepository
+    public class MongoDbItemsRepository : IItemsRepository
     {
         private const string databaseName = "catalog";
         private const string collectionsName = "items";
         private readonly IMongoCollection<Item> itemsCollection;
 
         private readonly FilterDefinitionBuilder<Item> filterBuilder = Builders<Item>.Filter;
+
+       
 
         public MongoDbItemsRepository(IMongoClient mongoClient) {
             IMongoDatabase database = mongoClient.GetDatabase(databaseName);

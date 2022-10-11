@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Catalog.Repositories
 {
-  public interface IInMemItemsRepository
+  public interface IItemsRepository
     {
         Task<Item> GetItemAsync(Guid id);
         Task<IEnumerable<Item>> GetItemsAsync();

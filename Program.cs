@@ -34,7 +34,7 @@ BsonSerializer.RegisterSerializer(new DateTimeOffsetSerializer(BsonType.String))
 builder.Services.AddSingleton<IMongoClient>(serviceProvider => {
         return new MongoClient(mongoDbSettings.ConnectionString);
 }); 
-builder.Services.AddSingleton<IInMemItemsRepository,MongoDbItemsRepository>();
+builder.Services.AddSingleton<IItemsRepository,MongoDbItemsRepository>();
 builder.Services.AddHealthChecks().AddMongoDb
 (
     mongoDbSettings.ConnectionString,
