@@ -1,0 +1,67 @@
+input[type='submit'], button, [aria-label] {
+    cursor: pointer;
+}
+body {
+    height: 100vh;
+    background: #066acd;
+}
+
+#editForm {
+    display: none;
+}
+
+input {
+    width: 75%;
+    height: 25px;
+    padding: 6px;
+    color: #111111;
+    font-weight: 500;
+    position: relative;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    border: 2px solid #d1d3d4;
+    align-content: center;
+}
+.container {
+    width: 40%;
+    top: 50%;
+    left: 50%;
+    background: white;
+    border-radius: 10px;
+    min-width: 450px;
+    position: absolute;
+    min-height: 100px;
+    transform: translate(-50%, -50%);
+}
+
+button {
+    position: relative;
+    float: right;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #0d75ec;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+table {
+    font-family: 'Poppins', sans-serif;
+    
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #f8f8f8;
+    padding: 5px;
+}
+
+td {
+    padding: 5px;
+}

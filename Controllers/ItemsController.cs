@@ -43,7 +43,6 @@ namespace Catalog.Controllers
             Item item = new(){
                 Id = Guid.NewGuid(),
                 Name = itemDto.Name,
-                Price = itemDto.Price,
                 CreatedDate = DateTimeOffset.UtcNow
             };
             await repository.CreateItemAsync(item);
@@ -61,7 +60,6 @@ namespace Catalog.Controllers
 
             Item updatedItem = existingItem with {
                 Name = itemDto.Name,
-                Price = itemDto.Price
             };
 
            await repository.UpdateItemAsync(updatedItem);
